@@ -1,0 +1,43 @@
+@import './partials/fonts';
+@import './vendors/bs-x5/bootstrap';
+@import './partials/base';
+
+
+
+.main-navbar{
+    background-color: $universal-color-1;
+    // nav{
+    //     background-color: $universal-color-1;
+    // }
+
+    .nav-link{
+        color: $universal-color-2!important;
+        font-size: clamp(1.2rem, .2vw, 1.6rem);
+        text-transform: uppercase;
+        i{
+            font-size: 1.5rem;
+        }
+        
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import './partials/mediaqueries';
