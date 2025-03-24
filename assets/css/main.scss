@@ -4,24 +4,84 @@
 
 
 
-.main-navbar{
+.main-navbar {
     background-color: $universal-color-1;
     // nav{
     //     background-color: $universal-color-1;
     // }
 
-    .nav-link{
-        color: $universal-color-2!important;
+    .nav-link {
+        color: $universal-color-2 !important;
         font-size: clamp(1rem, .2vw, 1.5rem);
         text-transform: uppercase;
-        i{
+
+        i {
             font-size: 1.5rem;
         }
-        
+
     }
 
 }
 
+.navbar-toggler{
+    color: $universal-color-2;
+}
+
+
+.main-hero-section {
+    position: relative;
+    max-width: 100%;
+    height: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    video{
+        filter: brightness(40%) contrast(120%);
+    }
+}
+
+
+
+.video-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 2;
+
+    h2{
+        padding-bottom: 2rem;
+        font-size: clamp(5rem, 6vw, 18rem)!important;
+        span{
+            font-size: 35%;
+            display: block;
+        }
+    }
+
+    a{
+        i{
+            color: $universal-color-2;
+            rotate: 90deg;
+        }
+        polygon{
+            stroke: $universal-color-2;
+            opacity: 1;
+           
+        }
+        &:hover{
+            i{
+                color: $universal-color-1;
+            }
+            polygon{
+                fill: $universal-color-2!important;
+            }
+        }
+
+    }
+}
 
 
 

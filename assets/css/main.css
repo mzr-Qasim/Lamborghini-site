@@ -12038,10 +12038,12 @@ a {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  min-width: 4rem;
+  min-height: 4rem;
   position: relative;
 }
 .theme-button i {
-  font-size: 2rem;
+  font-size: 1rem;
 }
 .theme-button svg {
   position: absolute;
@@ -12052,7 +12054,6 @@ a {
 .theme-button svg polygon {
   fill: transparent;
   stroke: #000000;
-  opacity: 0.5;
   transition: all ease-in-out 0.5s;
 }
 .theme-button:hover {
@@ -12073,4 +12074,52 @@ a {
 }
 .main-navbar .nav-link i {
   font-size: 1.5rem;
+}
+
+.navbar-toggler {
+  color: #ffffff;
+}
+
+.main-hero-section {
+  position: relative;
+  max-width: 100%;
+  height: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.main-hero-section video {
+  filter: brightness(40%) contrast(120%);
+}
+
+.video-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 2;
+}
+.video-caption h2, .video-caption .h2 {
+  padding-bottom: 2rem;
+  font-size: clamp(5rem, 6vw, 18rem) !important;
+}
+.video-caption h2 span, .video-caption .h2 span {
+  font-size: 35%;
+  display: block;
+}
+.video-caption a i {
+  color: #ffffff;
+  rotate: 90deg;
+}
+.video-caption a polygon {
+  stroke: #ffffff;
+  opacity: 1;
+}
+.video-caption a:hover i {
+  color: #000000;
+}
+.video-caption a:hover polygon {
+  fill: #ffffff !important;
 }/*# sourceMappingURL=main.css.map */
