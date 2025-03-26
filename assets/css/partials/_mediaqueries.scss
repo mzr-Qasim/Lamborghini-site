@@ -1,3 +1,39 @@
 @media (max-width:991px){
-    
+
+    .main-navbar{
+
+        .navbar-wrapper{
+            background-color: $universal-color-1;
+        }
+    }
+    .video-caption{
+        br{
+            display: none!important;
+        }
+    }
+    .car-specs{
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $universal-color-2;
+        font-size: 24px;
+        font-weight: bold;
+        z-index: 2;
+        ul{
+            flex-direction: column;
+            li{
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+    section.augmented-reality {
+        margin-bottom: 5rem;
+        .col-inner{
+            position: relative;
+            .lambo{
+                width: 300px;
+            }
+        }
+    }
 }

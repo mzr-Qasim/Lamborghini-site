@@ -6,7 +6,10 @@ $universal-color-2: #ffffff;
 body{
     overflow: hidden;
     overflow-y: auto;
+    font-family: "Roboto", sans-serif;
+
 }
+
 
 
 
@@ -26,6 +29,12 @@ a{
 
 .container-lg{
     max-width: 1800px;
+    margin: 0 auto;
+}
+
+
+.container-md{
+    max-width: 1600px;
     margin: 0 auto;
 }
 

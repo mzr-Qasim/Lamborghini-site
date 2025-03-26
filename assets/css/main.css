@@ -1,8 +1,9 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @font-face {
   font-family: "icomoon";
-  src: url("fonts/icomoon.eot?ukr5gu");
-  src: url("fonts/icomoon.eot?ukr5gu#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?ukr5gu") format("truetype"), url("fonts/icomoon.woff?ukr5gu") format("woff"), url("fonts/icomoon.svg?ukr5gu#icomoon") format("svg");
+  src: url("fonts/icomoon.eot?nwlxn2");
+  src: url("fonts/icomoon.eot?nwlxn2#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?nwlxn2") format("truetype"), url("fonts/icomoon.woff?nwlxn2") format("woff"), url("fonts/icomoon.svg?nwlxn2#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -33,12 +34,16 @@
   content: "\e902";
 }
 
-.icon-play:before {
+.icon-navbar-icon:before {
   content: "\e903";
 }
 
-.icon-search:before {
+.icon-play:before {
   content: "\e904";
+}
+
+.icon-search:before {
+  content: "\e905";
 }
 
 /*!
@@ -12010,6 +12015,7 @@ textarea.form-control-lg {
 body {
   overflow: hidden;
   overflow-y: auto;
+  font-family: "Roboto", sans-serif;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, li, ul, figure {
@@ -12027,6 +12033,11 @@ a {
 
 .container-lg {
   max-width: 1800px;
+  margin: 0 auto;
+}
+
+.container-md {
+  max-width: 1600px;
   margin: 0 auto;
 }
 
@@ -12066,6 +12077,12 @@ a {
 
 .main-navbar {
   background-color: #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 6rem;
 }
 .main-navbar .nav-link {
   color: #ffffff !important;
@@ -12081,14 +12098,14 @@ a {
 }
 
 .main-hero-section {
+  padding-top: 6rem !important;
   position: relative;
-  max-width: 100%;
-  height: 800px;
-  margin: 0 auto;
+  width: 100%;
+  height: 1000px;
   overflow: hidden;
 }
 .main-hero-section video {
-  filter: brightness(40%) contrast(120%);
+  filter: brightness(50%) contrast(120%);
 }
 
 .video-caption {
@@ -12096,17 +12113,19 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: #ffffff;
   font-size: 24px;
   font-weight: bold;
   z-index: 2;
 }
 .video-caption h2, .video-caption .h2 {
   padding-bottom: 2rem;
-  font-size: clamp(5rem, 6vw, 18rem) !important;
+  font-weight: 800;
+  font-size: clamp(2.5rem, 5vw, 14rem);
 }
 .video-caption h2 span, .video-caption .h2 span {
-  font-size: 35%;
+  font-weight: 400;
+  font-size: 40%;
   display: block;
 }
 .video-caption a i {
@@ -12122,4 +12141,91 @@ a {
 }
 .video-caption a:hover polygon {
   fill: #ffffff !important;
+}
+
+.car-specs {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 2;
+}
+.car-specs ul li b {
+  font-weight: 400;
+  display: block;
+}
+.car-specs ul li small, .car-specs ul li .small {
+  font-weight: 300;
+}
+.car-specs ul li:not(:last-child) {
+  margin-right: 3rem;
+}
+
+section.augmented-reality {
+  margin-bottom: 5rem;
+}
+section.augmented-reality .col-inner {
+  display: flex;
+  align-items: center;
+  min-height: 100%;
+  position: relative;
+}
+section.augmented-reality .col-inner .lambo {
+  position: absolute;
+  top: 80%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  aspect-ratio: 1/0.5;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section.augmented-reality .col-inner figure {
+  width: 100%;
+  aspect-ratio: 1/0.45;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 60% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0%, 60% 100%, 0 100%);
+}
+section.augmented-reality .col-inner figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 991px) {
+  .main-navbar .navbar-wrapper {
+    background-color: #000000;
+  }
+  .video-caption br {
+    display: none !important;
+  }
+  .car-specs {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 2;
+  }
+  .car-specs ul {
+    flex-direction: column;
+  }
+  .car-specs ul li {
+    margin-bottom: 1.5rem;
+  }
+  section.augmented-reality {
+    margin-bottom: 5rem;
+  }
+  section.augmented-reality .col-inner {
+    position: relative;
+  }
+  section.augmented-reality .col-inner .lambo {
+    width: 300px;
+  }
 }/*# sourceMappingURL=main.css.map */

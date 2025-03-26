@@ -6,9 +6,12 @@
 
 .main-navbar {
     background-color: $universal-color-1;
-    // nav{
-    //     background-color: $universal-color-1;
-    // }
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 6rem;
 
     .nav-link {
         color: $universal-color-2 !important;
@@ -29,14 +32,16 @@
 
 
 .main-hero-section {
+    padding-top: 6rem!important;
     position: relative;
-    max-width: 100%;
-    height: 800px;
-    margin: 0 auto;
+    width: 100%;
+    height: 1000px;
     overflow: hidden;
 
+
+
     video{
-        filter: brightness(40%) contrast(120%);
+        filter: brightness(50%) contrast(120%);
     }
 }
 
@@ -47,16 +52,18 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: $universal-color-2;
     font-size: 24px;
     font-weight: bold;
     z-index: 2;
 
     h2{
         padding-bottom: 2rem;
-        font-size: clamp(5rem, 6vw, 18rem)!important;
+        font-weight:800;
+        font-size: clamp(2.5rem, 5vw, 14rem);
         span{
-            font-size: 35%;
+            font-weight: 400;
+            font-size: 40%;
             display: block;
         }
     }
@@ -81,10 +88,65 @@
         }
 
     }
+   
+}
+.car-specs{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $universal-color-2;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 2;
+    ul{
+        li{
+            b{
+                font-weight: 400;
+                display: block;
+            }
+            small{
+                font-weight: 300;
+            }
+            &:not(:last-child){
+                margin-right: 3rem;
+            }
+        }
+    }
 }
 
 
+section.augmented-reality {
+    margin-bottom: 5rem;
+    .col-inner{
+        display: flex;
+        align-items: center;
+        min-height: 100%;
+        position: relative;
+        .lambo{
+            position: absolute;
+            top: 80%;
+            left: 60%;
+            transform: translate(-50% ,-50%);  
+            width: 700px;
+            aspect-ratio: 1/.5;
+            object-fit: cover;
 
+        }
+        figure {
+            width: 100%;
+            aspect-ratio: 1/.45;
+            clip-path: polygon(0 0, 100% 0%, 60% 100%, 0 100%);
+    
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+     }
+  
+}
 
 
 
