@@ -12195,6 +12195,9 @@ section.augmented-reality .col-inner figure img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+section.augmented-reality .hello {
+  display: block !important;
+}
 
 @media (max-width: 991px) {
   .main-navbar .navbar-wrapper {
@@ -12221,6 +12224,13 @@ section.augmented-reality .col-inner figure img {
   }
   section.augmented-reality {
     margin-bottom: 5rem;
+  }
+  section.augmented-reality .row [class^=col-] {
+    flex-direction: column;
+    text-align: center;
+  }
+  section.augmented-reality .row [class^=col-]:not(:last-child) {
+    padding-bottom: 3rem;
   }
   section.augmented-reality .col-inner {
     position: relative;

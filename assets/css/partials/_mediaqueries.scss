@@ -29,6 +29,16 @@
     }
     section.augmented-reality {
         margin-bottom: 5rem;
+        .row [class^="col-"] {
+            flex-direction: column;
+            text-align: center;
+
+
+            &:not(:last-child){
+                padding-bottom: 3rem;
+            } 
+
+        }    
         .col-inner{
             position: relative;
             .lambo{
