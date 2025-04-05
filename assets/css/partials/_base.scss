@@ -1,5 +1,6 @@
 $universal-color-1: #000000;
 $universal-color-2: #ffffff;
+$theme-color: #181818;
 
 
 
@@ -13,7 +14,7 @@ body{
 
 
 
-h1, h2, h3, h4, li, ul, figure{
+h1, h2, h3, h4, li, ul, p, figure{
     margin: 0 ;
     padding: 0;
 }
@@ -29,15 +30,22 @@ a{
 
 .container-lg{
     max-width: 1800px;
-    margin: 0 auto;
 }
 
 
 .container-md{
     max-width: 1600px;
-    margin: 0 auto;
 }
 
+
+.hero-caption-space{
+    padding-bottom: 5rem;
+}
+
+
+.d_flex{
+    display: flex;
+}
 
 
 .theme-button {

@@ -12018,7 +12018,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, li, ul, figure {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, li, ul, p, figure {
   margin: 0;
   padding: 0;
 }
@@ -12033,12 +12033,18 @@ a {
 
 .container-lg {
   max-width: 1800px;
-  margin: 0 auto;
 }
 
 .container-md {
   max-width: 1600px;
-  margin: 0 auto;
+}
+
+.hero-caption-space {
+  padding-bottom: 5rem;
+}
+
+.d_flex {
+  display: flex;
 }
 
 .theme-button {
@@ -12076,7 +12082,7 @@ a {
 }
 
 .main-navbar {
-  background-color: #000000;
+  background-color: #181818;
   position: fixed;
   top: 0;
   left: 0;
@@ -12092,31 +12098,56 @@ a {
 .main-navbar .nav-link i {
   font-size: 1.5rem;
 }
+.main-navbar .nav-link.navbar-link {
+  position: relative;
+  overflow: hidden;
+}
+.main-navbar .nav-link.navbar-link::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  margin-top: 2rem;
+  background-color: #ffffff;
+  width: 100%;
+  height: 1px;
+  transform: translateX(-100%);
+  transition: all ease-in-out 0.3s;
+}
+.main-navbar .nav-link.navbar-link:hover::after {
+  transform: translateX(0);
+}
 
 .navbar-toggler {
   color: #ffffff;
 }
 
 .main-hero-section {
-  padding-top: 6rem !important;
+  padding: 12rem 0 6rem 0;
   position: relative;
   width: 100%;
-  height: 1000px;
-  overflow: hidden;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .main-hero-section video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   filter: brightness(50%) contrast(120%);
+  z-index: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .video-caption {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: #ffffff;
   font-size: 24px;
   font-weight: bold;
-  z-index: 2;
+  z-index: 50;
 }
 .video-caption h2, .video-caption .h2 {
   padding-bottom: 2rem;
@@ -12144,14 +12175,10 @@ a {
 }
 
 .car-specs {
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: #ffffff;
   font-size: 24px;
   font-weight: bold;
-  z-index: 2;
+  z-index: 50;
 }
 .car-specs ul li b {
   font-weight: 400;
@@ -12196,9 +12223,55 @@ section.augmented-reality .col-inner figure img {
      object-fit: cover;
 }
 section.augmented-reality .hello {
-  display: block !important;
+  display: block;
 }
 
+.augmented-wrapper {
+  justify-content: space-between;
+  align-items: center;
+}
+.augmented-wrapper .augmented-image {
+  width: 60%;
+  position: relative;
+}
+.augmented-wrapper .augmented-image figure {
+  width: 100%;
+  aspect-ratio: 1/0.45;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 70% 100%, 0 100%, 0% 50%);
+          clip-path: polygon(0 0, 100% 0%, 70% 100%, 0 100%, 0% 50%);
+}
+.augmented-wrapper .augmented-image figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.augmented-wrapper .augmented-image .lambo {
+  position: absolute;
+  top: 75%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  aspect-ratio: 1/0.5;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.augmented-wrapper .augmented-caption {
+  width: 30%;
+}
+
+@media (max-width: 1200px) {
+  .augmented-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .augmented-wrapper .augmented-image {
+    width: 100%;
+  }
+  .augmented-wrapper .augmented-caption {
+    width: 100%;
+  }
+}
 @media (max-width: 991px) {
   .main-navbar .navbar-wrapper {
     background-color: #000000;
@@ -12206,24 +12279,11 @@ section.augmented-reality .hello {
   .video-caption br {
     display: none !important;
   }
-  .car-specs {
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: bold;
-    z-index: 2;
-  }
   .car-specs ul {
     flex-direction: column;
   }
   .car-specs ul li {
     margin-bottom: 1.5rem;
-  }
-  section.augmented-reality {
-    margin-bottom: 5rem;
   }
   section.augmented-reality .row [class^=col-] {
     flex-direction: column;
@@ -12231,9 +12291,6 @@ section.augmented-reality .hello {
   }
   section.augmented-reality .row [class^=col-]:not(:last-child) {
     padding-bottom: 3rem;
-  }
-  section.augmented-reality .col-inner {
-    position: relative;
   }
   section.augmented-reality .col-inner .lambo {
     width: 300px;
