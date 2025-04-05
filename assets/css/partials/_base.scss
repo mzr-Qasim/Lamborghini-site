@@ -2,6 +2,8 @@ $universal-color-1: #000000;
 $universal-color-2: #ffffff;
 $theme-color: #181818;
 
+$container-width: 1600px;
+
 
 
 body{
@@ -38,6 +40,23 @@ a{
 }
 
 
+.section-space-sm{
+    margin-bottom: 5rem;
+}
+
+
+.section-space-lg{
+    margin-bottom: 10rem;
+}
+
+
+
+.partial-container-right{
+    max-width: calc((#{$container-width}) + (50% - (#{$container-width}/2) ));
+    padding-right: 1rem;
+    margin-right: auto;
+}
+
 .hero-caption-space{
     padding-bottom: 5rem;
 }
@@ -56,8 +75,8 @@ a{
     border: none;
     background-color: transparent;
     cursor: pointer;
-    min-width: 4rem;
-    min-height: 4rem;
+    width: 4rem;
+    height: 4rem;
     position: relative;
 
     i{

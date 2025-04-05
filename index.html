@@ -18,6 +18,9 @@
             <div class="container container-lg">
                 <nav class="navbar navbar-expand-lg">
                   <a class="navbar-brand" href="#"><img src="assets/images/main_logo.svg" alt=""></a>
+                  <a class="nav-link lg-show" style="display: none;" href=""><i class="icon-ask-me"></i></a>
+                  <a class="nav-link lg-show" style="display: none;" href=""><i class="icon-search"></i></a>
+
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="icon-navbar-icon"></span>
                   </button>
@@ -46,10 +49,10 @@
                         <li class="nav-item">
                             <a class="nav-link navbar-link" href="">Store</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item lg-hide">
                             <a class="nav-link" href=""><i class="icon-ask-me"></i></a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item lg-hide">
                             <a class="nav-link" href=""><i class="icon-search"></i></a>
                         </li>
                     </ul>
@@ -84,20 +87,39 @@
           </div>
         </div><!-- /.car-specs -->
       </div><!-- /.main-hero-section -->
-      <section class="augmented-reality">
+      <section class="augmented-reality section-space-lg">
+        <div class="partial-container-right">
         <div class="augmented-wrapper d_flex">
           <div class="augmented-image">
             <figure>
               <img src="assets/images/img.jpg" class="main" alt="">
+              <img  class="lambo" src="assets/images/lambo.png" class="lambo" alt="">
             </figure>
-            <img  src="assets/images/lambo.png" class="lambo" alt="">
           </div><!-- /.augmented-image -->
           <div class="augmented-caption">
-            <h3>AUGMENTED REALITY</h3>
-            <p>Frame the QR code with your smartphone and turn on the Lamborghini Augmented Reality experience.</p>
+            <h2 class="pb-4"><b>AUGMENTED REALITY</b></h2>
+            <p class="pb-5">Frame the QR code with your smartphone and turn on the Lamborghini Augmented Reality experience.</p>
+            <img class="qr-png" src="assets/images/qr-png.png" alt="">
           </div><!-- /.augmented-caption -->
         </div><!-- /.augmented-wrapper -->
+      </div><!-- /.partial-container-right -->
       </section><!-- /.augmented-reality -->
+      <section class="main-video-section">
+        <div class="main-video-section-wrapper">
+          <div class="video-inner" >
+          <div class="container">
+              <video class="main-video" src="assets/videos/main-hero-section.mp4"  autoplay loop muted preload="none"></video>
+              <button class="theme-button play-button">
+                <i class="icon-play"></i>
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 27.7 32"
+                    style="enable-background:new 0 0 27.7 32;" xml:space="preserve">
+                    <polygon points="0.2,8.1 0.2,23.9 13.9,31.8 27.5,23.9 27.5,8.1 13.9,0.2 " />
+                </svg>
+              </button>
+          </div><!-- /.container -->
+        </div><!-- /.video-inner -->
+        </div><!-- /.main-video-section-wrapper -->
+      </section><!-- /.main-video-section -->
     </main><!-- /.main-content -->
     <footer class="footer"></footer><!-- /.footer -->
 

@@ -17,6 +17,12 @@
 
         .navbar-wrapper{
             background-color: $universal-color-1;
+            .lg-show{
+                display: flex!important;
+            }
+            .lg-hide{
+                display: none;
+            }
         }
     }
     .video-caption{
@@ -32,21 +38,8 @@
             }
         }
     }
-    section.augmented-reality {
-        .row [class^="col-"] {
-            flex-direction: column;
-            text-align: center;
-
-
-            &:not(:last-child){
-                padding-bottom: 3rem;
-            } 
-
-        }    
-        .col-inner{
-            .lambo{
-                width: 300px;
-            }
-        }
-    }
+    
 }
+
+
+

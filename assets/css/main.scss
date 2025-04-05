@@ -22,39 +22,44 @@
         i {
             font-size: 1.5rem;
         }
-    &.navbar-link{
-        position: relative;
-        overflow: hidden;
-        &::after{
-            position: absolute;
-            content: '';
-            bottom: 0;
-            left: 0;
-            margin-top: 2rem;
-            background-color: $universal-color-2;
-            width: 100%;
-            height: 1px;
-            transform: translateX(-100%);
-            transition: all ease-in-out .3s;
 
-        }
+        &.navbar-link {
+            position: relative;
+            overflow: hidden;
+
+            &::after {
+                position: absolute;
+                content: '';
+                bottom: 0;
+                left: 0;
+                margin-top: 2rem;
+                background-color: $universal-color-2;
+                width: 100%;
+                text-align: center;
+                height: 1px;
+                transform: translateX(-100%);
+                transition: all ease-in-out .5s;
+                opacity: 0;
+
+            }
 
 
-        &:hover{
-            &::after{
-                transform: translateX(0);
+            &:hover {
+                &::after {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
             }
         }
-    }
 
 
-       
+
 
     }
 
 }
 
-.navbar-toggler{
+.navbar-toggler {
     color: $universal-color-2;
 }
 
@@ -71,13 +76,13 @@
 
 
 
-    video{
+    video {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        filter: brightness(50%) contrast(120%);
+        filter: brightness(50%) contrast(100%);
         z-index: 1;
         object-fit: cover;
     }
@@ -91,54 +96,62 @@
     font-weight: bold;
     z-index: 50;
 
-    h2{
+    h2 {
         padding-bottom: 2rem;
-        font-weight:800;
+        font-weight: 800;
         font-size: clamp(2.5rem, 5vw, 14rem);
-        span{
+
+        span {
             font-weight: 400;
             font-size: 40%;
             display: block;
         }
     }
 
-    a{
-        i{
+    a {
+        i {
             color: $universal-color-2;
             rotate: 90deg;
         }
-        polygon{
+
+        polygon {
             stroke: $universal-color-2;
             opacity: 1;
-           
+
         }
-        &:hover{
-            i{
+
+        &:hover {
+            i {
                 color: $universal-color-1;
             }
-            polygon{
-                fill: $universal-color-2!important;
+
+            polygon {
+                fill: $universal-color-2 !important;
             }
         }
 
     }
-   
+
 }
-.car-specs{
+
+.car-specs {
     color: $universal-color-2;
     font-size: 24px;
     font-weight: bold;
     z-index: 50;
-    ul{
-        li{
-            b{
+
+    ul {
+        li {
+            b {
                 font-weight: 400;
                 display: block;
             }
-            small{
+
+            small {
                 font-weight: 300;
             }
-            &:not(:last-child){
+
+            &:not(:last-child) {
                 margin-right: 3rem;
             }
         }
@@ -146,82 +159,115 @@
 }
 
 
-section.augmented-reality {
-    margin-bottom: 5rem;
-    .col-inner{
-        display: flex;
-        align-items: center;
-        min-height: 100%;
-        position: relative;
-        .lambo{
-            position: absolute;
-            top: 80%;
-            left: 60%;
-            transform: translate(-50% ,-50%);  
-            width: 700px;
-            aspect-ratio: 1/.5;
-            object-fit: cover;
-
-        }
-        figure {
-            width: 100%;
-            aspect-ratio: 1/.45;
-            clip-path: polygon(0 0, 100% 0%, 60% 100%, 0 100%);
-    
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-     }
-     .hello{
-        display: block;
-     }
-  
-}
 
 
-.augmented-wrapper{
+.augmented-wrapper {
     justify-content: space-between;
     align-items: center;
-    .augmented-image{
-        width: 60%;
-        position: relative;
 
-        figure{
+}
+
+    .augmented-image {
+        width: 65%;    
+        position: relative;        
+
+        figure {
             width: 100%;
-            aspect-ratio: 1 / 0.45;
+            aspect-ratio: 1 / 0.5;
             clip-path: polygon(0 0, 100% 0%, 70% 100%, 0 100%, 0% 50%);
+            z-index: 1;
+            overflow: hidden;
 
-            img{
+
+
+            img.main {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-    
+ 
+
+            }
+
+            img.lambo {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: 1000;
+
             }
         }
 
 
-        .lambo{
-            position: absolute;
-            top: 75%;
-            left: 70%;
-            transform: translate(-50%, -50%);
-            width: 700px;
-            aspect-ratio: 1 / 0.5;
+
+
+
+    .augmented-caption {
+        width: 25%;
+
+        .qr-png {
+            width: 120px;
+            height: 120px;
             object-fit: cover;
         }
-
-    }
-    .augmented-caption{
-        width: 30%;
     }
 }
 
 
 
+.main-video-section-wrapper {
 
+    .video-inner {
+        position: relative;
+        z-index: 1;
+
+        .main-video {
+            width: 100%;
+            height: 500px;
+            filter: brightness(50%) contrast(100%);
+            object-fit: cover;
+
+           
+
+        }
+
+    }
+
+
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 5rem;
+    height: 5rem;
+    color: $universal-color-2;
+    i{
+        font-size: 1.5rem;
+    }
+
+    svg {
+        polygon {
+            stroke: $universal-color-2;
+        }
+
+    }
+
+    &:hover {
+        color: $universal-color-1 !important;
+
+        polygon {
+            fill: $universal-color-2;
+        }
+
+    }
+
+}
 
 
 
