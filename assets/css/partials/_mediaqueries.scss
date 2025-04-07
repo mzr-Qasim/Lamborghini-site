@@ -20,6 +20,9 @@
 @media (max-width:991px){
 
     .main-navbar{
+        .navbar-nav{
+            margin-bottom: 0!important;
+        }
 
         .navbar-wrapper{
             background-color: $universal-color-1;
