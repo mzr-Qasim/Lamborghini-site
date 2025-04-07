@@ -1,13 +1,19 @@
 @media (max-width:1200px){
-    .augmented-wrapper{
-        flex-direction: column;
-        align-items: flex-start;
+    .augmented-reality{
+        .augmented-reality-wrapper{
+            flex-direction: column;
+            align-items: center;
 
-        .augmented-image{
+        }
+        .augmented-image {
             width: 100%;
         }
-        .augmented-caption{
+        .augmented-caption {
             width: 100%;
+            padding: 3rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     }
 }
@@ -36,6 +42,13 @@
             li{
                 margin-bottom: 1.5rem;
             }
+        }
+    }
+    .augmented-reality{
+        .col-inner{
+            flex-direction: column!important;
+            justify-content: center!important;
+            align-items: center;
         }
     }
     

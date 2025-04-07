@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?7mcsu9');
-  src:  url('fonts/icomoon.eot?7mcsu9#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?7mcsu9') format('truetype'),
-    url('fonts/icomoon.woff?7mcsu9') format('woff'),
-    url('fonts/icomoon.svg?7mcsu9#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?hrhawa');
+  src:  url('fonts/icomoon.eot?hrhawa#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?hrhawa') format('truetype'),
+    url('fonts/icomoon.woff?hrhawa') format('woff'),
+    url('fonts/icomoon.svg?hrhawa#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -39,9 +39,15 @@
 .icon-navbar-icon:before {
   content: "\e903";
 }
-.icon-play:before {
+.icon-pause_icon:before {
   content: "\e904";
 }
-.icon-search:before {
+.icon-play:before {
   content: "\e905";
+}
+.icon-play-33:before {
+  content: "\e906";
+}
+.icon-search:before {
+  content: "\e907";
 }

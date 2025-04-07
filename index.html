@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
-<body>
+<body id="body">
     <!-- <div class="container">
        
     </div> -->
@@ -87,30 +87,28 @@
           </div>
         </div><!-- /.car-specs -->
       </div><!-- /.main-hero-section -->
-      <section class="augmented-reality section-space-lg">
-        <div class="partial-container-right">
-        <div class="augmented-wrapper d_flex">
-          <div class="augmented-image">
-            <figure>
-              <img src="assets/images/img.jpg" class="main" alt="">
-              <img  class="lambo" src="assets/images/lambo.png" class="lambo" alt="">
-            </figure>
-          </div><!-- /.augmented-image -->
-          <div class="augmented-caption">
-            <h2 class="pb-4"><b>AUGMENTED REALITY</b></h2>
-            <p class="pb-5">Frame the QR code with your smartphone and turn on the Lamborghini Augmented Reality experience.</p>
-            <img class="qr-png" src="assets/images/qr-png.png" alt="">
-          </div><!-- /.augmented-caption -->
-        </div><!-- /.augmented-wrapper -->
-      </div><!-- /.partial-container-right -->
+      <section class="augmented-reality section-space-md">
+          <div class="augmented-reality-wrapper">
+            <div class="augmented-image ">
+              <figure>
+                <img src="assets/images/img.jpg" class="main" alt="">
+                <img  class="lambo" src="assets/images/lambo.png" class="lambo" alt="">
+              </figure>
+            </div><!-- /.augmented-image -->
+            <div class="augmented-caption">
+                <h2 class="pb-4"><b>AUGMENTED REALITY</b></h2>
+                <p class="pb-5">Frame the QR code with your smartphone and turn on the Lamborghini Augmented Reality experience.</p>
+                <img class="qr-png" src="assets/images/qr-png.png" alt="">
+            </div><!-- /.augmented-caption -->     
+          </div><!-- /.augmented-reality-wrapper -->
       </section><!-- /.augmented-reality -->
       <section class="main-video-section">
         <div class="main-video-section-wrapper">
           <div class="video-inner" >
           <div class="container">
-              <video class="main-video" src="assets/videos/main-hero-section.mp4"  autoplay loop muted preload="none"></video>
-              <button class="theme-button play-button">
-                <i class="icon-play"></i>
+              <video class="main-video" id="main_video" src="assets/videos/main-hero-section.mp4"  poster="assets/images/poster.jpg" preload="none" type="video/mp4"></video>
+              <button id="play_btn" class="theme-button play-button">
+                <i id="play_icon" class="icon-play"></i>
                 <svg xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 27.7 32"
                     style="enable-background:new 0 0 27.7 32;" xml:space="preserve">
                     <polygon points="0.2,8.1 0.2,23.9 13.9,31.8 27.5,23.9 27.5,8.1 13.9,0.2 " />
