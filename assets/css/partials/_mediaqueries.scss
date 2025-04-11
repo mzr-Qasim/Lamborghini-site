@@ -18,6 +18,9 @@
     }
 }
 @media (max-width:991px){
+    .partial-container-right{
+        padding-left: 1rem;
+    }
 
     .main-navbar{
         .navbar-nav{
@@ -25,7 +28,6 @@
         }
 
         .navbar-wrapper{
-            background-color: $universal-color-1;
             .lg-show{
                 display: flex!important;
             }
@@ -49,9 +51,21 @@
     }
     .augmented-reality{
         .col-inner{
-            flex-direction: column!important;
-            justify-content: center!important;
-            align-items: center;
+            align-items: flex-start;
+        }
+    }
+    .overview{
+        .col-inner{
+            padding-bottom: 5rem!important;
+        }
+    }
+
+    .overview-image{
+
+        figure{
+            img{
+                clip-path: none;
+            }
         }
     }
     

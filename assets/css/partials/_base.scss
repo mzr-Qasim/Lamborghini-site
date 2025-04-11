@@ -2,8 +2,10 @@ $universal-color-1: #000000;
 $universal-color-2: #ffffff;
 $theme-color: #181818;
 
-$container-width: 1600px;
+$container-width: 1800px;
 
+
+$section-space-mq: 7rem;
 
 
 body{
@@ -62,6 +64,10 @@ a{
     margin-right: auto;
 }
 
+.n_m{
+    padding-left: 0!important;
+}
+
 .hero-caption-space{
     padding-bottom: 5rem;
 }
@@ -69,6 +75,10 @@ a{
 
 .d_flex{
     display: flex;
+}
+
+.para{
+    line-height: 2rem;
 }
 
 
